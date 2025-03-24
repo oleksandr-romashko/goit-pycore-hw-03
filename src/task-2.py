@@ -1,12 +1,12 @@
 import random
 
-def get_numbers_ticket(min: int, max: int, quantity: int) -> set[int]:
+def get_numbers_ticket(min: int, max: int, quantity: int) -> list[int]:
     '''
     Generates unique numbers for a lottery.
     :param min: Minimum number (not less than 1).
     :param max: Maximum number in a set (not greater than 1000).
     :param quantity: How many numbers to choose (should be between min and max values)
-    :return: Random numbers based on input values.
+    :return: List of random numbers based on input values.
     '''
     # Validate input values guard
     if min < 1 or min > max:
