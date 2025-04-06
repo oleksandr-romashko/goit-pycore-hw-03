@@ -5,10 +5,11 @@ def get_days_from_today(date: str) -> int | None:
     Calculates number of days between given date and current date.
     :param date: String date representation in a specific date format.
     :return: Number of days between given date and current date.
-             Positive value if date is in the past.
-             Negative value if date is in the future.
-             None in case of improper date value or date format and logs 
-             descriptive error message in case of improper date value or date format.
+                Positive value if date is in the past.
+                Negative value if date is in the future.
+             None in case of improper date value or date format with logging 
+             descriptive error message to console in case of improper date value
+             or date format.
     """
 
     # Acceptable date format
