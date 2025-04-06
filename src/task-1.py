@@ -18,6 +18,7 @@ def get_days_from_today(date: str) -> int | None:
     try:
         target_date = datetime.datetime.strptime(date, date_format).date()
     except ValueError as e:
+        # Log error message
         print(f"[ERROR] {e}")
         return None
 
