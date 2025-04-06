@@ -27,10 +27,15 @@ def get_numbers_ticket(min: int, max: int, quantity: int) -> list[int]:
     return numbers
 
 # Tests
-test_numbers_multiple_values = get_numbers_ticket(10, 20, 4)
-assert len(test_numbers_multiple_values) == 4
+test_numbers_multiple_values = get_numbers_ticket(1, 49, 6)
+assert len(test_numbers_multiple_values) == 6
 for number in test_numbers_multiple_values:
-    assert 10 <= number <= 20
+    assert 1 <= number <= 49
+
+test_numbers_multiple_values = get_numbers_ticket(1, 36, 5)
+assert len(test_numbers_multiple_values) == 5
+for number in test_numbers_multiple_values:
+    assert 1 <= number <= 36
 
 test_numbers_extreme_values = get_numbers_ticket(1, 1000, 20)
 assert len(test_numbers_extreme_values) == 20
@@ -85,6 +90,18 @@ max_number = 49
 numbers_quantity = 6
 
 lottery_numbers = get_numbers_ticket(min_number, max_number, numbers_quantity)
+print(f"Lottery: min number value: {min_number}, max number value: {max_number}, number of tickets: {numbers_quantity}")
+print(f"Your lottery numbers: {lottery_numbers}")
 
+max_number = 36
+numbers_quantity = 5
+
+lottery_numbers = get_numbers_ticket(min_number, max_number, numbers_quantity)
+print(f"Lottery: min number value: {min_number}, max number value: {max_number}, number of tickets: {numbers_quantity}")
+print(f"Your lottery numbers: {lottery_numbers}")
+
+numbers_quantity = 37
+
+lottery_numbers = get_numbers_ticket(min_number, max_number, numbers_quantity)
 print(f"Lottery: min number value: {min_number}, max number value: {max_number}, number of tickets: {numbers_quantity}")
 print(f"Your lottery numbers: {lottery_numbers}")
